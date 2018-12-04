@@ -30,7 +30,13 @@ public class PlayActivity extends AppCompatActivity {
     private void initVideo() {
         MediaController localMediaController = new MediaController(this);
         mVideoView.setMediaController(localMediaController);
-        mVideoView.setVideoURI(Uri.parse(uri));
+  /*      mVideoView.setVideoURI(Uri.parse("https://github.com/MrXiong/TrafficWarnings/blob/master/app/src/main/res/raw/v1.mp4"));
+        mVideoView.start();*/
+
+
+        String url="http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8";
+        mVideoView.setVideoPath(url);
+        mVideoView.requestFocus();
         mVideoView.start();
     }
 }
